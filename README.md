@@ -59,10 +59,5 @@ streamlit run app.py
 | `engine.cpp` | C++ Source code for toxicity calculations |
 | `libengine.so` | Compiled binary (Linux/Android) |
 
-### 🔬 Scientific Logic
-The simulation uses a mathematical decay model where:
-30715 GSH(t) = GSH_{initial} \times e^{-(k + \frac{Dose}{10000})t} 30715
-Where *k* is the metabolic constant and *Dose* increases the rate of depletion.
-
 ---
 **Created by Shubham10SC**
