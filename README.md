@@ -28,3 +28,41 @@ Since this project uses a custom C++ engine, you must compile the backend before
 git clone https://github.com/Shubham10SC/Paracetamol-Toxicity-Metabolism-Simulator.git
 cd Paracetamol-Toxicity-Metabolism-Simulator
 
+
+#### 2. Install Python Dependencies
+```bash
+pip install streamlit numpy matplotlib rdkit
+```
+
+#### 3. Compile the C++ Engine ⚙️
+**For Linux / macOS / Termux:**
+```bash
+g++ -shared -o libengine.so -fPIC engine.cpp
+```
+
+**For Windows:**
+```bash
+g++ -shared -o libengine.dll engine.cpp
+```
+
+#### 4. Run the Application
+```bash
+streamlit run app.py
+```
+
+---
+
+### 📂 Project Structure
+| File | Description |
+| :--- | :--- |
+| `app.py` | Main Python application (UI & Logic Bridge) |
+| `engine.cpp` | C++ Source code for toxicity calculations |
+| `libengine.so` | Compiled binary (Linux/Android) |
+
+### 🔬 Scientific Logic
+The simulation uses a mathematical decay model where:
+30715 GSH(t) = GSH_{initial} \times e^{-(k + \frac{Dose}{10000})t} 30715
+Where *k* is the metabolic constant and *Dose* increases the rate of depletion.
+
+---
+**Created by Shubham10SC**
